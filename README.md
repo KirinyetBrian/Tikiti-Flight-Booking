@@ -23,7 +23,7 @@ cd into the directory where you want to clone the project
 
 1. Clone GitHub repo for this project locally
  ```
-   git clone https://github.com/KirinyetBrian/Baraton-Laravel.git
+   git clone https://github.com/KirinyetBrian/Tikiti-Flight-Booking.git
    
   ``` 
 2. cd into your project
