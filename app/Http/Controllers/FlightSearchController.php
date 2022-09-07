@@ -39,7 +39,6 @@ $data = [
         'GDS'
     ]
 ];
-\Log::info($data);
 
 try {
     $response = $client->post($url, [
@@ -51,6 +50,7 @@ try {
     ]);
     $response = $response->getBody();
     $response = json_decode($response);
+    \Log::info( $response->data);
     return view('search')->with('flights', $response->data);
 } catch (GuzzleException $exception) {
     return $exception;

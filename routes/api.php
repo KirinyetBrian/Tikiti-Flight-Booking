@@ -4,7 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccessTokenController;
 use App\Http\Controllers\FlightSearchController;
-
+use App\Http\Controllers\GetPriceController;
+use App\Http\Controllers\OrderFlightController;
 
 Route::get('/init', AccessTokenController::class);
 /*
@@ -23,3 +24,9 @@ Route::get('/init', AccessTokenController::class);
 // });
 
 Route::post('/search', FlightSearchController::class);
+Route::post('/price', GetPriceController::class);
+
+Route::post('/order', OrderFlightController::class);
+
+
+
