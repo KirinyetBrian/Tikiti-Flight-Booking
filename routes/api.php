@@ -6,6 +6,7 @@ use App\Http\Controllers\AccessTokenController;
 use App\Http\Controllers\FlightSearchController;
 use App\Http\Controllers\GetPriceController;
 use App\Http\Controllers\OrderFlightController;
+use App\Http\Controllers\SearchAirports_CitiesController;
 
 Route::get('/init', AccessTokenController::class);
 /*
@@ -28,5 +29,4 @@ Route::post('/price', GetPriceController::class);
 
 Route::post('/order', OrderFlightController::class);
 
-
-
+Route::post('/search_airport', SearchAirports_CitiesController::class);

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SearchAirports_Cities extends Controller
+class SearchAirports_CitiesController extends Controller
 {
     public function __invoke(Request $request, Client $client)
     {
@@ -34,7 +34,7 @@ class SearchAirports_Cities extends Controller
             ]);
             $response = $response->getBody();
             $response = json_decode($response);
-            return view('confirm')->with('Airports', $response->data);
+            return view('search_results')->with('Airports', $response->data);
         } catch (GuzzleException $exception) {
             return $exception->getMessage();
         }
